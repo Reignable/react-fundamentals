@@ -8,7 +8,13 @@
     const rootElement = document.getElementById('root')
     const root = ReactDOM.createRoot(rootElement)
 
-    const elementProps = {children: 'Hello World', className: 'container'}
+    const helloSpan = React.createElement('span', {children: 'Hello'})
+    const worldSpan = React.createElement('span', {children: 'World'})
+
+    const elementProps = {
+      children: [helloSpan, ' ', worldSpan],
+      className: 'container',
+    }
     const elementType = 'div'
     const reactElement = React.createElement(elementType, elementProps)
 
